@@ -15,8 +15,11 @@ Thumbs.db
 # Logs
 *.log
 
+# Node Modules
+node_modules/
+
 # Others
 *.pid
 *.tmp
 *.bak
-/SystemClockMod/SystemClockUiMod/node_modules/
+.vs/
