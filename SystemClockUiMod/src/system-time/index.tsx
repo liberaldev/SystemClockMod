@@ -1,29 +1,30 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import styles from "./system-time.module.css";
 import {ModuleRegistryExtend} from "cs2/modding";
+import {TimeFormat, useLocalization} from "cs2/l10n";
+
 
 export const SystemTime : ModuleRegistryExtend = (Component) => {
     return (props) => {
         const { children, ...otherProps } = props || {};
+
+        const { translate, unitSettings } = useLocalization();
         
         const [time, setTime] = useState("");
-
-        // 사용자 시간제 감지 (단순히 12시간제인지 여부를 추정)
-        const prefers12Hour = (() => {
-            const test = new Date().toLocaleTimeString();
-            return /AM|PM/i.test(test);
-        })();
+        const is12Hour = useRef(!(unitSettings.timeFormat == (0 satisfies TimeFormat.TwentyFourHours)));
+        const localeKoKr = useRef<Element|null>()
 
         // 시간 포맷팅 함수
-        const formatTime = (date: Date, is12Hour: boolean) => {
+        const formatTime = (date: Date) => {
             let hours = date.getHours();
             const minutes = date.getMinutes();
             const seconds = date.getSeconds();
 
             // 12시간제인 경우
-            let ampm = "";
-            if (is12Hour) {
-                ampm = hours >= 12 ? "오후" : "오전";
+            let ampm: string | null = "";
+            if (is12Hour.current) {
+                ampm = hours >= 12 ? translate("SystemClock.PostMeridiem", "PM") :
+                    translate("SystemClock.AnteMeridiem", "AM");
                 hours = hours % 12;
                 if (hours === 0) hours = 12; // 0시를 12시로
             }
@@ -31,13 +32,18 @@ export const SystemTime : ModuleRegistryExtend = (Component) => {
             // 두 자리 숫자 포맷
             const pad = (num: number) => String(num).padStart(2, "0");
 
-            return `${is12Hour ? ampm + " " : ""}${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+            return `${is12Hour.current && localeKoKr.current ? ampm + " " : ""}
+            ${pad(hours)}:${pad(minutes)}:${pad(seconds)}
+            ${is12Hour.current && !localeKoKr.current ?  " "  + ampm : ""}`;
         };
 
         useEffect(() => {
             const timer = setInterval(() => {
+                localeKoKr.current = document.querySelector('.locale-ko-KR');
+                is12Hour.current = document.querySelector("[class^=time-period]") != null
                 const now = new Date();
-                setTime(formatTime(now, true));
+                console.log(is12Hour.current);
+                setTime(formatTime(now));
             }, 1000);
 
             // 컴포넌트 언마운트 시 타이머 정리
