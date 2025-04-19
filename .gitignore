@@ -1,7 +1,7 @@
 ﻿# Build results
 [Bb]in/
-obj/Debug/
-obj/Release/
+[Oo]bj/[Dd]ebug/*
+[Oo]bj/[Rr]elease/*
 [Ll]ibrary/
 [Tt]emp/
 [Bb]uild/
