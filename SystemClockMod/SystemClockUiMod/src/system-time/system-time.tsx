@@ -2,8 +2,10 @@ import React, {useEffect, useState} from "react";
 import styles from "./system-time.module.css";
 import {ModuleRegistryExtend} from "cs2/modding";
 
-export const SystemTime : ModuleRegistryExtend = () => {
-    return (_props) => {
+export const SystemTime : ModuleRegistryExtend = (Component) => {
+    return (props) => {
+        const { children, ...otherProps } = props || {};
+        
         const [time, setTime] = useState("");
 
         // 사용자 시간제 감지 (단순히 12시간제인지 여부를 추정)
@@ -43,13 +45,16 @@ export const SystemTime : ModuleRegistryExtend = () => {
         }, []);
 
         return (
-            <div className={"field_eKJ selectable_otQ"}>
-                <div className={"container_kOI container_MC3"}>
-                    <div className={"label_qsp label_mWz content_syM"}>
-                        {time}
+            <>
+                <div className={"field_eKJ"}>
+                    <div className={"container_kOI container_MC3"}>
+                        <div className={"label_qsp label_mWz content_syM"}>
+                            {time}
+                        </div>
                     </div>
                 </div>
-            </div>
+                <Component {...otherProps}></Component>
+            </>
         );
-    }
-};
+    };
+}
