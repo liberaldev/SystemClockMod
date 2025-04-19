@@ -1,12 +1,12 @@
 ﻿# Build results
 [Bb]in/
-/*/[Oo]bj/[Dd]ebug/*
-/*/[Oo]bj/[Rr]elease/*
-/*/[Ll]ibrary/
-/*/[Tt]emp/
-/*/[Bb]uild/
-/*/[Bb]uilds/
-/*/[Ll]ogs/
+/*/[Oo]bj/[Dd]ebug
+/*/[Oo]bj/[Rr]elease
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
 
 # OS files
 .DS_Store
