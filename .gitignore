@@ -1,2 +1,22 @@
-﻿/SystemClockMod/SystemClockUiMod/node_modules/
+﻿# Build results
+[Bb]in/
+[Oo]bj/[D]ebug/
+[Oo]bj/[R]elease/
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Others
 *.pid
+*.tmp
+*.bak
+/SystemClockMod/SystemClockUiMod/node_modules/

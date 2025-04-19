@@ -16,6 +16,8 @@ namespace SystemClockMod
 
             if (GameManager.instance.modManager.TryGetExecutableAsset(this, out var asset))
                 log.Info($"Current mod asset at {asset.path}");
+            var myModSetting = new MyModSetting(this);
+            myModSetting.RegisterInOptionsUI();
         }
 
         public void OnDispose()
