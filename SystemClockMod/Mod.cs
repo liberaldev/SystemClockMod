@@ -7,6 +7,7 @@ namespace SystemClockMod
 {
     public class Mod : IMod
     {
+        
         public static ILog log = LogManager.GetLogger($"{nameof(SystemClockMod)}.{nameof(Mod)}")
             .SetShowsErrorsInUI(false);
 
@@ -16,8 +17,8 @@ namespace SystemClockMod
 
             if (GameManager.instance.modManager.TryGetExecutableAsset(this, out var asset))
                 log.Info($"Current mod asset at {asset.path}");
-            var myModSetting = new Setting(this);
-            myModSetting.RegisterInOptionsUI();
+            // var myModSetting = new Setting(this);
+            // myModSetting.RegisterInOptionsUI();
         }
 
         public void OnDispose()
