@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemClockMod", "SystemClockMod\SystemClockMod.csproj", "{35D916B3-478F-4C9E-8194-6BE2A904EA80}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "SystemClockUiMod", "SystemClockUiMod\SystemClockUiMod.esproj", "{DD132C60-B071-2DFC-4351-62BD62F2639E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,16 @@ Global
 		{35D916B3-478F-4C9E-8194-6BE2A904EA80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35D916B3-478F-4C9E-8194-6BE2A904EA80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35D916B3-478F-4C9E-8194-6BE2A904EA80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD65C174-3E25-455F-A325-0A92DADCE2D3}
 	EndGlobalSection
 EndGlobal
