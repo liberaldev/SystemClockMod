@@ -20,8 +20,6 @@ Global
 		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD132C60-B071-2DFC-4351-62BD62F2639E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
