@@ -23,6 +23,9 @@
         <Reference Include="Game">
             <Private>false</Private>
         </Reference>
+        <Reference Include="Game.UI">
+            <Private>false</Private>
+        </Reference>
         <Reference Include="Colossal.Core">
             <Private>false</Private>
         </Reference>
@@ -30,6 +33,9 @@
             <Private>false</Private>
         </Reference>
         <Reference Include="Colossal.IO.AssetDatabase">
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Colossal.UI.Binding">
             <Private>false</Private>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
