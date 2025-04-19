@@ -1,9 +1,0 @@
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\bin\Debug\net472\SystemClockMod.dll
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\bin\Debug\net472\SystemClockMod.pdb
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\obj\Debug\net472\SystemClockMod.csproj.AssemblyReference.cache
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\obj\Debug\net472\SystemClockMod.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\obj\Debug\net472\SystemClockMod.AssemblyInfoInputs.cache
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\obj\Debug\net472\SystemClockMod.AssemblyInfo.cs
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\obj\Debug\net472\SystemClockMod.csproj.CoreCompileInputs.cache
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\obj\Debug\net472\SystemClockMod.dll
-C:\Users\user\RiderProjects\SystemClockMod\SystemClockMod\obj\Debug\net472\SystemClockMod.pdb
