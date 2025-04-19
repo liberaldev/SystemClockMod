@@ -23,9 +23,6 @@
         <Reference Include="Game">
             <Private>false</Private>
         </Reference>
-        <Reference Include="Game.UI">
-            <Private>false</Private>
-        </Reference>
         <Reference Include="Colossal.Core">
             <Private>false</Private>
         </Reference>
@@ -76,6 +73,10 @@
         <Content Include="lang\**">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="obj\" />
     </ItemGroup>
 
 </Project>
