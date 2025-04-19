@@ -32,4 +32,5 @@ This is a long description
 	</ChangeLog>-->
 	<!--External link, can be set multiple times. supported types are "discord", "github", "youtube", "twitch", "x", "paypal", "patreon", "buymeacoffee", "kofi", "crowdin", "gitlab", "gofundme"-->
 	<ExternalLink Type="" Url="" />
+	<Dependency Id="75426" DisplayName="I18n EveryWhere" />
 </Publish>
