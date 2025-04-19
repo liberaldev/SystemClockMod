@@ -98,6 +98,11 @@ module.exports = {
         extractComments: {
           banner: () => banner,
         },
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+        },
       }),
     ],
   },
