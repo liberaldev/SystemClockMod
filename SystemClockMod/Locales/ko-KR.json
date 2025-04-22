@@ -1,5 +1,12 @@
 ﻿{
   "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "시스템 시계",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSize]": "시계 사이즈",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSize]": "시계 사이즈를 설정합니다. AdvancedSimulationSpeed 등 하단 패널을 사용하는 모드와 이 모드를 함께 사용하는 경우 시계 사이즈를 크게 하지 않는 것을 권장합니다.",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.Small]": "작게",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.Medium]": "중간",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.Large]": "크게",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "초 단위 표시",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "활성화 할 경우 초 단위 까지의 시각을 표시합니다.",
   "SystemClock.AnteMeridiem": "오전",
   "SystemClock.PostMeridiem": "오후",
   "SystemModClock.Languege.DisplayName": "한국어"
