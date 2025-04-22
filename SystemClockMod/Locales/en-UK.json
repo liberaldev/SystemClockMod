@@ -1,4 +1,5 @@
 ﻿{
+  "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "시스템 시계",
   "SystemClock.AnteMeridiem": "AM",
   "SystemClock.PostMeridiem": "PM",
   "SystemModClock.Languege.DisplayName": "English (UK)"

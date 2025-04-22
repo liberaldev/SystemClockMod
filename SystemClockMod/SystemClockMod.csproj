@@ -9,11 +9,13 @@
         <PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
         <MSBuildCopyContentTransitively>true</MSBuildCopyContentTransitively>
         <UseUtf8Output>true</UseUtf8Output>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <!--Imports must be after PropertyGroup block-->
     <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.props"/>
     <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.targets"/>
+    <Import Project="..\LibShared\LibShared.projitems" Label="Shared" />
 
     <Target Name="BuildUI" AfterTargets="AfterBuild">
         <Exec Command="npm run build" WorkingDirectory="$(ProjectDir)..\SystemClockUiMod" />
@@ -29,10 +31,16 @@
         <Reference Include="Colossal.Logging">
             <Private>false</Private>
         </Reference>
+        <Reference Include="Colossal.Localization">
+            <Private>false</Private>
+        </Reference>
         <Reference Include="Colossal.IO.AssetDatabase">
             <Private>false</Private>
         </Reference>
         <Reference Include="Colossal.UI.Binding">
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Colossal.PSI.Common">
             <Private>false</Private>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
@@ -62,6 +70,9 @@
         <Reference Update="System.Data">
             <Private>false</Private>
         </Reference>
+        <Reference Update="System.Linq">
+            <Private>false</Private>
+        </Reference>
     </ItemGroup>
 
     <ItemGroup>
@@ -70,9 +81,7 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Content Include="lang\**">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
+        <EmbeddedResource Include="Locales\*.json" />
     </ItemGroup>
     
     <ItemGroup>
