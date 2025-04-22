@@ -23,7 +23,7 @@ const banner = `
 `;
 
 module.exports = {
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  mode: process.env.NODE_ENV === "development" ? "development" : "production",
   stats: "none",
   entry: {
     [MOD.id]: "./src/index.tsx",
