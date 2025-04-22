@@ -51,7 +51,7 @@ namespace SystemClockMod
         protected override void OnCreate()
         {
             base.OnCreate();
-            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "GetFormattedSystemTime", (() => CurrentTimeString)));
+            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "FormattedSystemTime", (() => CurrentTimeString)));
             _timer = new System.Timers.Timer(1000); // 1초마다
             _timer.Elapsed += (s, e) => CurrentTimeString = GetFormattedSystemTime();
             _timer.AutoReset = true;
