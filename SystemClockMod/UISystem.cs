@@ -31,7 +31,15 @@ namespace SystemClockMod
                     ? "SystemClock.AnteMeridiem".Translate()
                     : "SystemClock.PostMeridiem".Translate();
 
-                if (hour >= 13) hour -= 12;
+                switch (hour)
+                {
+                    case 0:
+                        hour = 12;
+                        break;
+                    case >= 13:
+                        hour -= 12;
+                        break;
+                }
 
                 if (!LocalesWithAmpmPrefix.Contains(GameManager.instance.localizationManager.activeLocaleId))
                 {
