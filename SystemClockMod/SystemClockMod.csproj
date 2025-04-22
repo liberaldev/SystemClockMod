@@ -16,12 +16,12 @@
     <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.props"/>
     <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.targets"/>
     <Import Project="..\LibShared\LibShared.projitems" Label="Shared" />
-
-    <Target Name="BuildUI" AfterTargets="AfterBuild" Condition="'$(Configuration)' == 'Release'">
+    
+    <Target Name="BuildUI" AfterTargets="AfterBuild" Condition="'$(Configuration)' != 'Release'">
         <Exec Command="npm run build" WorkingDirectory="$(ProjectDir)..\SystemClockUiMod" />
     </Target>
-    <Target Name="BuildUI" AfterTargets="AfterBuild" Condition="'$(Configuration)' != 'Release'">
-        <Exec Command="set NODE_ENV=development &amp;&amp; npm run build" WorkingDirectory="$(ProjectDir)..\SystemClockUiMod" />
+    <Target Name="BuildUI" AfterTargets="AfterBuild" Condition="'$(Configuration)' == 'Release'">
+        <Exec Command="set NODE_ENV=production &amp;&amp; npm run build" WorkingDirectory="$(ProjectDir)..\SystemClockUiMod" />
     </Target>
 
     <ItemGroup>
@@ -85,10 +85,6 @@
     
     <ItemGroup>
         <EmbeddedResource Include="Locales\*.json" />
-    </ItemGroup>
-    
-    <ItemGroup>
-      <Folder Include="obj\" />
     </ItemGroup>
 
 </Project>
