@@ -10,6 +10,7 @@ namespace SystemClockMod
         
         public static ILog log = LogManager.GetLogger($"{nameof(SystemClockMod)}.{nameof(Mod)}")
             .SetShowsErrorsInUI(false);
+        internal static Setting Setting;
 
         public void OnLoad(UpdateSystem updateSystem)
         {
@@ -19,6 +20,8 @@ namespace SystemClockMod
                 log.Info($"Current mod asset at {asset.path}");
             // var myModSetting = new Setting(this);
             // myModSetting.RegisterInOptionsUI();
+            Setting = new Setting(this);
+            Setting.RegisterInOptionsUI();
         }
 
         public void OnDispose()

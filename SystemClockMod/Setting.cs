@@ -15,6 +15,6 @@ namespace SystemClockMod
         {
         }
 
-        public bool DisplaySecond { get; set; }
+        public bool DisplaySeconds { get; set; }
     }
 }
