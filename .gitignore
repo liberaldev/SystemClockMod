@@ -22,4 +22,6 @@ node_modules/
 *.tmp
 *.bak
 *.user
+*.info
+*./
 .vs/
