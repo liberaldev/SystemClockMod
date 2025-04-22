@@ -11,16 +11,16 @@ namespace SystemClockMod
     {
         private static readonly InterfaceSettings InterfaceSettings = new InterfaceSettings();
         internal const string ID = "SystemClockMod";
-        public static ILog log = LogManager.GetLogger($"{nameof(SystemClockMod)}.{nameof(Mod)}")
+        private static readonly ILog LOG = LogManager.GetLogger($"{nameof(SystemClockMod)}.{nameof(Mod)}")
             .SetShowsErrorsInUI(false);
         internal static Setting Setting;
 
         public void OnLoad(UpdateSystem updateSystem)
         {
-            log.Info(nameof(OnLoad));
+            LOG.Info(nameof(OnLoad));
 
             if (GameManager.instance.modManager.TryGetExecutableAsset(this, out var asset))
-                log.Info($"Current mod asset at {asset.path}"); 
+                LOG.Info($"Current mod asset at {asset.path}"); 
             Setting = new Setting(this);
             Setting.RegisterInOptionsUI();
             
@@ -28,15 +28,15 @@ namespace SystemClockMod
              * source: https://github.com/zakuro9715/CS2-AdvancedSimulationSpeed/blob/main/AdvancedSimulationSpeed/Mod.cs
              */
             var localizationManager = GameManager.instance.localizationManager;
-            LocaleLoader.Load(log, localizationManager);
+            LocaleLoader.Load(LOG, localizationManager);
             
             updateSystem.UpdateAt<UISystem>(SystemUpdatePhase.UIUpdate);
         }
 
         public void OnDispose()
         {
-            log.Info(nameof(OnDispose));
-            log.Info($"12 hours time: {InterfaceSettings.timeFormat}, {InterfaceSettings.timeFormat == InterfaceSettings.TimeFormat.TwelveHours}");
+            LOG.Info(nameof(OnDispose));
+            LOG.Info($"12 hours time: {InterfaceSettings.timeFormat}, {InterfaceSettings.timeFormat == InterfaceSettings.TimeFormat.TwelveHours}");
         }
     }
 }
