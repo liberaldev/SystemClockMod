@@ -17,8 +17,6 @@ namespace SystemClockMod
 
         public void OnLoad(UpdateSystem updateSystem)
         {
-            var interfaceSettings = GameManager.instance.settings.userInterface;
-            
             log.Info(nameof(OnLoad));
 
             if (GameManager.instance.modManager.TryGetExecutableAsset(this, out var asset))
@@ -31,9 +29,6 @@ namespace SystemClockMod
              */
             var localizationManager = GameManager.instance.localizationManager;
             LocaleLoader.Load(log, localizationManager);
-            log.Info($"locale: {interfaceSettings.currentLocale}");
-            log.Info($"12 hours time: {interfaceSettings.timeFormat}, {interfaceSettings.timeFormat == InterfaceSettings.TimeFormat.TwelveHours}");
-            log.Info($"unit: {interfaceSettings.unitSystem}");
             
             updateSystem.UpdateAt<UISystem>(SystemUpdatePhase.UIUpdate);
         }
