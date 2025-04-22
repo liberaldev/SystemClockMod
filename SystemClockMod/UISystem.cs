@@ -10,10 +10,10 @@ namespace SystemClockMod
 {
     public partial class UISystem : UISystemBase
     {
-        private string SystemTime { get; set; } = GetTime();
+        private string SystemTime { get; set; } = GetSystemTime();
         private static readonly string[] AmpmPrefixLocales = ["ko-KR"];
         
-        private static string GetTime()
+        private static string GetSystemTime()
         {
             var interfaceSettings = GameManager.instance.settings.userInterface;
             var nowDateTime = DateTime.Now;
@@ -49,9 +49,9 @@ namespace SystemClockMod
         protected override void OnCreate()
         {
             base.OnCreate();
-            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "GetTime", (() => SystemTime)));
+            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "GetSystemTime", (() => SystemTime)));
             var timer = new System.Timers.Timer(1000); // 1초마다
-            timer.Elapsed += (s, e) => SystemTime = GetTime();
+            timer.Elapsed += (s, e) => SystemTime = GetSystemTime();
             timer.AutoReset = true;
             timer.Start();
         }
