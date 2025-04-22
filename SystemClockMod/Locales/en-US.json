@@ -1,6 +1,6 @@
 ﻿{
   "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "System Clock",
-  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSize]": "시계 사이즈",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSize]": "Clock size",
   "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSize]": "Set the clock size. When using this mod with mods that use the bottom panel, such as AdvancedSimulationSpeed, we recommend that you do not increase the clock size.",
   "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.Small]": "Small",
   "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.Medium]": "Medium",
