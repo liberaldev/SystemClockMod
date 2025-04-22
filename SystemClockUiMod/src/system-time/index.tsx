@@ -6,24 +6,24 @@ import mod from "../../mod.json"
 
 
 export const SystemTime : ModuleRegistryExtend = (Component) => {
-    const getSystemTime = bindValue<string>(mod.id, "GetSystemTime")
+    const getFormattedSystemTime = bindValue<string>(mod.id, "GetFormattedSystemTime")
     return (props) => {
         const { children, ...otherProps } = props || {};
 
-        const getSystemTimeValue = useValue(getSystemTime)
-        const [systemTime, setSystemTime] = useState(useValue(getSystemTime));
+        const getFormattedSystemTimeValue = useValue(getFormattedSystemTime)
+        const [formattedSystemTime, setFormattedSystemTime] = useState(useValue(getFormattedSystemTime));
         
         useEffect(() => {
-            setSystemTime(getSystemTimeValue);
-            console.log(systemTime)
-        }, [getSystemTimeValue]);
+            setFormattedSystemTime(getFormattedSystemTimeValue);
+            console.log(formattedSystemTime)
+        }, [getFormattedSystemTimeValue]);
 
         return (
             <>
                 <div className={"field_eKJ"}>
                     <div className={"container_kOI container_MC3"}>
                         <div className={"label_qsp label_mWz content_syM"}>
-                            {systemTime}
+                            {formattedSystemTime}
                         </div>
                     </div>
                 </div>

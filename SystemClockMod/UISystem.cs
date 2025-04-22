@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Colossal.UI.Binding;
 using Game.SceneFlow;
@@ -10,16 +10,16 @@ namespace SystemClockMod
 {
     public partial class UISystem : UISystemBase
     {
-        private string SystemTime { get; set; } = GetSystemTime();
-        private static readonly string[] AmpmPrefixLocales = ["ko-KR"];
+        private string CurrentTimeString { get; set; } = GetFormattedSystemTime();
+        private static readonly string[] LocalesWithAmpmPrefix = ["ko-KR"];
         
-        private static string GetSystemTime()
+        private static string GetFormattedSystemTime()
         {
             var interfaceSettings = GameManager.instance.settings.userInterface;
             var nowDateTime = DateTime.Now;
             
             var hour = nowDateTime.Hour;
-            var result = $"{nowDateTime.Minute:00}{(Mod.Setting.DisplaySeconds ? ":" + nowDateTime.Second.ToString("00") : "")}";
+            var formattedTime = $"{nowDateTime.Minute:00}{(Mod.Setting.DisplaySeconds ? ":" + nowDateTime.Second.ToString("00") : "")}";
 
             if (interfaceSettings.timeFormat == InterfaceSettings.TimeFormat.TwelveHours)
             {
@@ -29,31 +29,33 @@ namespace SystemClockMod
 
                 if (hour >= 13) hour -= 12;
 
-                if (!AmpmPrefixLocales.Contains(GameManager.instance.localizationManager.activeLocaleId))
+                if (!LocalesWithAmpmPrefix.Contains(GameManager.instance.localizationManager.activeLocaleId))
                 {
-                    result = $"{hour:00}:{result} {ampm}";
+                    formattedTime = $"{hour:00}:{formattedTime} {ampm}";
                 }
                 else
                 {
-                    result = $"{ampm} {hour:00}:{result}";
+                    formattedTime = $"{ampm} {hour:00}:{formattedTime}";
                 }
             }
             else
             {
-                result = $"{hour:00}:{result}";
+                formattedTime = $"{hour:00}:{formattedTime}";
             }
 
-            return result;
+            return formattedTime;
         }
+
+        private System.Timers.Timer _timer;
 
         protected override void OnCreate()
         {
             base.OnCreate();
-            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "GetSystemTime", (() => SystemTime)));
-            var timer = new System.Timers.Timer(1000); // 1초마다
-            timer.Elapsed += (s, e) => SystemTime = GetSystemTime();
-            timer.AutoReset = true;
-            timer.Start();
+            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "GetFormattedSystemTime", (() => CurrentTimeString)));
+            _timer = new System.Timers.Timer(1000); // 1초마다
+            _timer.Elapsed += (s, e) => CurrentTimeString = GetFormattedSystemTime();
+            _timer.AutoReset = true;
+            _timer.Start();
         }
     }
 }
