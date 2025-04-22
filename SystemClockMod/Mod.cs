@@ -9,7 +9,7 @@ namespace SystemClockMod
     
     public class Mod : IMod
     {
-        
+        internal const string ID = "SystemClockMod";
         public static ILog log = LogManager.GetLogger($"{nameof(SystemClockMod)}.{nameof(Mod)}")
             .SetShowsErrorsInUI(false);
         internal static Setting Setting;
@@ -29,6 +29,7 @@ namespace SystemClockMod
             var localizationManager = GameManager.instance.localizationManager;
             LocaleLoader.Load(log, localizationManager);
             
+            updateSystem.UpdateAt<UISystem>(SystemUpdatePhase.UIUpdate);
         }
 
         public void OnDispose()
