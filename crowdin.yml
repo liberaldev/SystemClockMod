@@ -1,0 +1,3 @@
+files:
+  - source: /SystemClockMod/Locales/ko-KR.json
+    translation: '%original_path%/%locale%.json'
