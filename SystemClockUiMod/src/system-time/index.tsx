@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
-import styles from "./system-time.module.css";
 import {ModuleRegistryExtend} from "cs2/modding";
 import {bindValue, useValue} from "cs2/api";
 import mod from "../../mod.json"
-import { getModule } from "cs2/modding";
 
 export const SystemTime : ModuleRegistryExtend = (Component) => {
     const formattedSystemTime$ = bindValue<string>(mod.id, "FormattedSystemTime")
