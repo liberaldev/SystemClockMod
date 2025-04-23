@@ -6,12 +6,8 @@ using Game.UI.Widgets;
 namespace SystemClockMod
 {
     [FileLocation(nameof(Setting))]
-    public class Setting : ModSetting
+    public class Setting(IMod mod) : ModSetting(mod)
     {
-        public Setting(IMod mod) : base(mod)
-        {
-        }
-
         public override void SetDefaults()
         {
             ClockSize = "Medium";

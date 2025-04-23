@@ -41,14 +41,7 @@ namespace SystemClockMod
                         break;
                 }
 
-                if (!LocalesWithAmpmPrefix.Contains(GameManager.instance.localizationManager.activeLocaleId))
-                {
-                    formattedTime = $"{hour:00}:{formattedTime} {ampm}";
-                }
-                else
-                {
-                    formattedTime = $"{ampm} {hour:00}:{formattedTime}";
-                }
+                formattedTime = !LocalesWithAmpmPrefix.Contains(GameManager.instance.localizationManager.activeLocaleId) ? $"{hour:00}:{formattedTime} {ampm}" : $"{ampm} {hour:00}:{formattedTime}";
             }
             else
             {
@@ -63,20 +56,21 @@ namespace SystemClockMod
         protected override void OnCreate()
         {
             base.OnCreate();
-
-            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "FormattedSystemTime", (() => CurrentTimeString)));
+            
+            AddBinding(_clockSize = new ValueBinding<string>(Mod.ID, "ClockSize", ClockSizeSetting));
             
             /* Thanks for zakuro9715
              * source: https://github.com/zakuro9715/CS2-AdvancedSimulationSpeed/blob/main/AdvancedSimulationSpeed/Systems/UISystem.cs
              */
-            Mod.Setting.onSettingsApplied += (Game.Settings.Setting settings) =>
+            Mod.Setting.onSettingsApplied += (_) =>
             {
                 _clockSize.Update(ClockSizeSetting);
             };
             
-            AddBinding(_clockSize = new ValueBinding<string>(Mod.ID, "ClockSize", Mod.Setting.ClockSize));
+            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "FormattedSystemTime", (() => CurrentTimeString)));
+            
             _timer = new System.Timers.Timer(1000); // 1초마다
-            _timer.Elapsed += (s, e) => CurrentTimeString = GetFormattedSystemTime();
+            _timer.Elapsed += (_, _) => CurrentTimeString = GetFormattedSystemTime();
             _timer.AutoReset = true;
             _timer.Start();
         }

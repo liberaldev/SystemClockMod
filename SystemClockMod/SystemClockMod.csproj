@@ -16,14 +16,23 @@
     <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.props"/>
     <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.targets"/>
     <Import Project="..\LibShared\LibShared.projitems" Label="Shared" />
-    
-    <Target Name="BuildUI" AfterTargets="AfterBuild" Condition="'$(Configuration)' != 'Release'">
-        <Exec Command="npm run build" WorkingDirectory="$(ProjectDir)..\SystemClockUiMod" />
-    </Target>
-    <Target Name="BuildUI" AfterTargets="AfterBuild" Condition="'$(Configuration)' == 'Release'">
-        <Exec Command="set NODE_ENV=production &amp;&amp; npm run build" WorkingDirectory="$(ProjectDir)..\SystemClockUiMod" />
-    </Target>
 
+    <PropertyGroup>
+        <BuildCommand Condition="'$(Configuration)' == 'Release'">
+            set NODE_ENV=production &amp;&amp; npm run build
+        </BuildCommand>
+        <BuildCommand Condition="'$(Configuration)' != 'Release'">
+            npm run build
+        </BuildCommand>
+    </PropertyGroup>
+
+    <Target Name="BuildUI" AfterTargets="AfterBuild">
+        <Exec
+                Command="$(BuildCommand)"
+                WorkingDirectory="$(ProjectDir)..\SystemClockUiMod"
+                Condition="'$(BuildCommand)' != ''" />
+    </Target>
+    
     <ItemGroup>
         <Reference Include="Game">
             <Private>false</Private>

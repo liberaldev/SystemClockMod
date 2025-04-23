@@ -36,7 +36,6 @@ namespace SystemClockMod
         public void OnDispose()
         {
             LOG.Info(nameof(OnDispose));
-            LOG.Info($"12 hours time: {InterfaceSettings.timeFormat}, {InterfaceSettings.timeFormat == InterfaceSettings.TimeFormat.TwelveHours}");
         }
     }
 }
