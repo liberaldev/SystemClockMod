@@ -38,4 +38,5 @@ A mod displays the system clock in-game. This makes it possible to see real time
 	</ChangeLog>-->
 	<!--External link, can be set multiple times. supported types are "discord", "github", "youtube", "twitch", "x", "paypal", "patreon", "buymeacoffee", "kofi", "crowdin", "gitlab", "gofundme"-->
 	<ExternalLink Type="github" Url="https://github.com/liberaldev/SystemClockMod" />
+	<ExternalLink Type="crowdin" Url="https://crowdin.com/project/cites-skyline2-system-clock-mod" />
 </Publish>
