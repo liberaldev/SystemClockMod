@@ -67,7 +67,7 @@ namespace SystemClockMod
                 _clockSize.Update(ClockSizeSetting);
             };
             
-            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "FormattedSystemTime", (() => CurrentTimeString)));
+            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "FormattedSystemTime", () => CurrentTimeString));
             
             _timer = new System.Timers.Timer(1000); // 1초마다
             _timer.Elapsed += (_, _) => CurrentTimeString = GetFormattedSystemTime();
