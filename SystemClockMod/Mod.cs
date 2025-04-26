@@ -1,4 +1,5 @@
-﻿using Colossal.Logging;
+﻿using Colossal.IO.AssetDatabase;
+using Colossal.Logging;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
@@ -30,12 +31,17 @@ namespace SystemClockMod
             var localizationManager = GameManager.instance.localizationManager;
             LocaleLoader.Load(LOG, localizationManager);
             
+            AssetDatabase.global.LoadSettings(nameof(SystemClockMod), Setting, new Setting(this));
+            
             updateSystem.UpdateAt<UISystem>(SystemUpdatePhase.UIUpdate);
         }
 
         public void OnDispose()
         {
             LOG.Info(nameof(OnDispose));
+            if (Setting == null) return;
+            Setting.UnregisterInOptionsUI();
+            Setting = null;
         }
     }
 }

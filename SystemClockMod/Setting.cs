@@ -5,9 +5,11 @@ using Game.UI.Widgets;
 
 namespace SystemClockMod
 {
-    [FileLocation(nameof(Setting))]
+    [FileLocation(nameof(SystemClockMod))]
     public class Setting(IMod mod) : ModSetting(mod)
     {
+        private const string Section = "Main";
+        
         public override void SetDefaults()
         {
             ClockSize = "Medium";
@@ -15,6 +17,7 @@ namespace SystemClockMod
         }
         
         [SettingsUIDropdown(typeof(Setting), nameof(GetSizeDropdownItems))]
+        [SettingsUISection(Section)]
         public string ClockSize { get; set; } = "Medium";
 
         public DropdownItem<string>[] GetSizeDropdownItems()
@@ -41,8 +44,7 @@ namespace SystemClockMod
             return items;
         }
 
+        [SettingsUISection(Section)]
         public bool DisplaySeconds { get; set; }
-        
-        
     }
 }
