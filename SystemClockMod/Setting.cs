@@ -12,37 +12,19 @@ namespace SystemClockMod
         
         public override void SetDefaults()
         {
-            ClockSize = "Medium";
+            ClockSizeSetting = ClockSize.Medium;
             DisplaySeconds = false;
         }
-        
-        [SettingsUIDropdown(typeof(Setting), nameof(GetSizeDropdownItems))]
-        [SettingsUISection(Section)]
-        public string ClockSize { get; set; } = "Medium";
 
-        public DropdownItem<string>[] GetSizeDropdownItems()
+        public enum ClockSize
         {
-            var items = new DropdownItem<string>[]
-            {
-                new DropdownItem<string>
-                {
-                    value = "Small",
-                    displayName = GetOptionLabelLocaleID("Small"),
-                },
-                new DropdownItem<string>
-                {
-                    value = "Medium",
-                    displayName = GetOptionLabelLocaleID("Medium"),
-                },
-                new DropdownItem<string>
-                {
-                    value = "Large",
-                    displayName = GetOptionLabelLocaleID("Large"),
-                },
-            };
-
-            return items;
+            Small,
+            Medium,
+            Large
         }
+        
+        [SettingsUISection(Section)]
+        public ClockSize ClockSizeSetting { get; set; }
 
         [SettingsUISection(Section)]
         public bool DisplaySeconds { get; set; }

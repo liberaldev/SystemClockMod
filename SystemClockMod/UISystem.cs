@@ -12,7 +12,7 @@ namespace SystemClockMod
     {
         private string CurrentTimeString { get; set; } = GetFormattedSystemTime();
         private static readonly string[] LocalesWithAmpmPrefix = ["ko-KR"];
-        private static string ClockSizeSetting => Mod.Setting.ClockSize;
+        private static string ClockSizeSetting => Mod.Setting.ClockSizeSetting.ToString();
 
         private ValueBinding<string> _clockSize;
         
