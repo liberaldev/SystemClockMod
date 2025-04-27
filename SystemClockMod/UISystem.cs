@@ -28,8 +28,8 @@ namespace SystemClockMod
             if (interfaceSettings.timeFormat == InterfaceSettings.TimeFormat.TwelveHours)
             {
                 var ampm = nowDateTime.ToString("tt", System.Globalization.CultureInfo.InvariantCulture) == "AM"
-                    ? "SystemClock.AnteMeridiem".Translate()
-                    : "SystemClock.PostMeridiem".Translate();
+                    ? "SystemClockMod.AnteMeridiem".Translate()
+                    : "SystemClockMod.PostMeridiem".Translate();
 
                 switch (hour)
                 {
