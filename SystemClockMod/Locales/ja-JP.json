@@ -9,5 +9,5 @@
   "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Shows the time up to the second when enabled.",
   "SystemClock.AnteMeridiem": "AM",
   "SystemClock.PostMeridiem": "PM",
-  "SystemModClock.Languege.DisplayName": "English (US)"
+  "SystemModClock.Languege.DisplayName": "日本語"
 }
