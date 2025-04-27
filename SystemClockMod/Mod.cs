@@ -12,6 +12,7 @@ namespace SystemClockMod
         internal const string ID = "SystemClockMod";
         private static readonly ILog LOG = LogManager.GetLogger($"{nameof(SystemClockMod)}.{nameof(Mod)}")
             .SetShowsErrorsInUI(false);
+        
         internal static Setting Setting;
 
         public void OnLoad(UpdateSystem updateSystem)
