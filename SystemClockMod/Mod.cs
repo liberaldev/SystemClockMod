@@ -3,14 +3,12 @@ using Colossal.Logging;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
-using Game.Settings;
 using LibShared.Localization;
 
 namespace SystemClockMod
 {
     public class Mod : IMod
     {
-        private static readonly InterfaceSettings InterfaceSettings = new InterfaceSettings();
         internal const string ID = "SystemClockMod";
         private static readonly ILog LOG = LogManager.GetLogger($"{nameof(SystemClockMod)}.{nameof(Mod)}")
             .SetShowsErrorsInUI(false);
