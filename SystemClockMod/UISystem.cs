@@ -13,9 +13,9 @@ namespace SystemClockMod
         private string CurrentTimeString { get; set; } = GetFormattedSystemTime();
         private static readonly string[] LocalesWithAmpmPrefix = ["ko-KR"];
         private static string ClockSizeSetting => Mod.Setting.ClockSizeSetting.ToString();
-
-        private ValueBinding<string> _clockSize;
         
+        private System.Timers.Timer _timer;
+        private ValueBinding<string> _clockSize;
         
         private static string GetFormattedSystemTime()
         {
@@ -51,11 +51,16 @@ namespace SystemClockMod
             return formattedTime;
         }
 
-        private System.Timers.Timer _timer;
-
         protected override void OnCreate()
         {
             base.OnCreate();
+            
+            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "FormattedSystemTime", () => CurrentTimeString));
+            
+            _timer = new System.Timers.Timer(1000); // 1초마다
+            _timer.Elapsed += (_, _) => CurrentTimeString = GetFormattedSystemTime();
+            _timer.AutoReset = true;
+            _timer.Start();
             
             AddBinding(_clockSize = new ValueBinding<string>(Mod.ID, "ClockSize", ClockSizeSetting));
             
@@ -66,13 +71,6 @@ namespace SystemClockMod
             {
                 _clockSize.Update(ClockSizeSetting);
             };
-            
-            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "FormattedSystemTime", () => CurrentTimeString));
-            
-            _timer = new System.Timers.Timer(1000); // 1초마다
-            _timer.Elapsed += (_, _) => CurrentTimeString = GetFormattedSystemTime();
-            _timer.AutoReset = true;
-            _timer.Start();
         }
     }
 }
