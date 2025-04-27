@@ -72,5 +72,15 @@ namespace SystemClockMod
                 _clockSize.Update(ClockSizeSetting);
             };
         }
+        
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            
+            if (_timer == null) return;
+            _timer.Stop();
+            _timer.Dispose();
+            _timer = null;
+        }
     }
 }
