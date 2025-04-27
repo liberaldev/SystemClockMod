@@ -2,12 +2,12 @@
   "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "System Clock",
   "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Clock size",
   "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Set the clock size. When using this mod with mods that use the bottom panel, such as AdvancedSimulationSpeed, it is recommended that you do not increase the clock size.",
-  "Options.SystemClockMod.SystemClockMod.Mod.ClockSize[Small]": "Small",
-  "Options.SystemClockMod.SystemClockMod.Mod.ClockSize[Medium]": "Medium",
-  "Options.SystemClockMod.SystemClockMod.Mod.ClockSize[Large]": "Large",
+  "Options.SystemClockMod.SystemClockMod.Mod.ClockSize[Small]": "작게",
+  "Options.SystemClockMod.SystemClockMod.Mod.ClockSize[Medium]": "중간",
+  "Options.SystemClockMod.SystemClockMod.Mod.ClockSize[Large]": "크게",
   "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Display in seconds",
   "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Shows the time up to the second when enabled.",
   "SystemClockMod.AnteMeridiem": "AM",
   "SystemClockMod.PostMeridiem": "PM",
-  "SystemClockMod.Languege.DisplayName": "한국어"
+  "SystemClockMod.Languege.DisplayName": "Italiano"
 }
