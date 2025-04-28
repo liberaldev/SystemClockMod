@@ -1,7 +1,7 @@
 ﻿{
   "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "System Clock",
   "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Rozmiar zegara",
-  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Set the clock size. When using this mod with mods that use the bottom panel, such as AdvancedSimulationSpeed, it is recommended that you do not increase the clock size.",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Ustaw rozmiar zegara. Jeśli używasz tego moda wraz z modami korzystającymi z dolnego paska, takimi jak Advanced Simulation Speed, zaleca się, aby nie zwiększać rozmiaru zegara.",
   "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Small]": "Mały",
   "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Medium]": "Średni",
   "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Large]": "Duży",
