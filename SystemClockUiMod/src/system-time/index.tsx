@@ -9,9 +9,6 @@ export const SystemTime : ModuleRegistryExtend = (Component) => {
 
     type SizeMap = {
         [key: string]: string
-        small: string
-        medium: string
-        large: string
     }
     const sizes: SizeMap = {
         small: "120rem",
