@@ -20,19 +20,19 @@ export const SystemTime : ModuleRegistryExtend = (Component) => {
         const { children, ...otherProps } = props || {};
 
         const formattedSystemTimeValue = useValue(formattedSystemTime$)
-        const clockSizeValue = useValue(clockSize$);
+        const clockSizeValue = useValue(clockSize$).toLowerCase();
         
         const [clock, setClock] = useState(useValue(formattedSystemTime$));
         
         useEffect(() => {
             setClock(formattedSystemTimeValue);
             console.log(clock)
-            console.log(sizes[clockSizeValue.toLowerCase()])
+            console.log(sizes[clockSizeValue])
         }, [formattedSystemTimeValue]);
 
         return (
             <>
-                <div className={"field_eKJ"} style={{width: sizes[clockSizeValue.toLowerCase()]}}>
+                <div className={"field_eKJ"} style={{width: sizes[clockSizeValue]}}>
                     <div className={"container_kOI container_MC3"}>
                         <div className={"label_qsp label_mWz content_syM"}>
                             {clock}
