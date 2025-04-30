@@ -18,13 +18,14 @@
     <Import Project="..\LibShared\LibShared.projitems" Label="Shared" />
 
     <PropertyGroup>
-        <SetNodeEnv Condition="'$(Configuration)' == 'Release'">set NODE_ENV=production &amp;&amp; </SetNodeEnv>
+        <EnvVars Condition="'$(Configuration)'=='Release'">NODE_ENV=production</EnvVars>
     </PropertyGroup>
 
     <Target Name="BuildUI" AfterTargets="AfterBuild">
         <Exec
                 Command="$(SetNodeEnv)npm run build"
-                WorkingDirectory="$(ProjectDir)..\SystemClockUiMod" />
+                WorkingDirectory="$(ProjectDir)..\SystemClockUiMod"
+                EnvironmentVariables="$(EnvVars)" />
     </Target>
     
     <ItemGroup>
