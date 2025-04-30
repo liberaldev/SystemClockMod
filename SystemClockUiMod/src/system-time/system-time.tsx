@@ -27,7 +27,7 @@ export const SystemTime : ModuleRegistryExtend = (Component) => {
         useEffect(() => {
             setClock(formattedSystemTimeValue);
             console.log(clock)
-            console.log(sizes[clockSizeValue])
+            console.log("Clock size: " + sizes[clockSizeValue])
         }, [formattedSystemTimeValue]);
 
         return (

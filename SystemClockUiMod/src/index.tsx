@@ -1,6 +1,6 @@
 import { ModRegistrar } from "cs2/modding";
 
-import {SystemTime} from "./system-time";
+import {SystemTime} from "./system-time/system-time";
 
 const register: ModRegistrar = (moduleRegistry) => {
     /*console.log(
