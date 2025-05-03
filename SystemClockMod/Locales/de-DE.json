@@ -1,3 +1,6 @@
 ﻿{
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Small]": "Klein",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Medium]": "Mittel",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Large]": "Groß",
   "SystemClockMod.Languege.DisplayName": "Deutsch"
 }
