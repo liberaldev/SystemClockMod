@@ -1,3 +1,13 @@
 ﻿{
-  "SystemClockMod.Languege.DisplayName": "繁体中文"
+  "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "系統時鐘",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "時鐘圖標尺寸",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "此選項用於設定此模組的時鐘圖標大小。與其他使用底部面板的模組 (如 Advanced Simulation Speed 等) 一起使用時，不建議將尺寸調大。",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Small]": "小",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Medium]": "中",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Large]": "大",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "以秒為單位顯示",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "啟用時，顯示時間將精確到秒級別。",
+  "SystemClockMod.AnteMeridiem": "上午",
+  "SystemClockMod.PostMeridiem": "下午",
+  "SystemClockMod.Languege.DisplayName": "繁體中文"
 }
