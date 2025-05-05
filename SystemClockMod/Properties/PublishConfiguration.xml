@@ -22,7 +22,7 @@ A mod displays the system clock in-game. This makes it possible to see real time
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.0.6" />
+	<ModVersion Value="1.0.7" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.2.*" />
 	<!--Dependency for the mod, can be set multiple times-->
@@ -30,7 +30,7 @@ A mod displays the system clock in-game. This makes it possible to see real time
 	<!--Required DLC, can be set multiple times. Supported values are "Landmark Buildings", "San Fransisco Set", "Beach Properties", "Urban Promenades", "Modern Architecture"-->
 	<RequiredDLC Value="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
-	<ChangeLog Value="Fixed an issue where Chinese locale was not loading properly" />
+	<ChangeLog Value="Updated with the latest translations from Crowdin" />
 	<!--<ChangeLog>
  * Changed the way locale is loaded, no longer requiring i18n Everyware. Based on code by zakuro9715, which is licensed under the GPLv3, the license for this mod is also GPLv3. This change changes very little for the average user.
  * You can set the clock size in the preferences, and you can choose to show it down to the second. The default is to not show seconds, so if you want it to show seconds like it used to, go to the System Clock section in Settings and change the setting. 
