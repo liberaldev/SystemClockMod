@@ -1,6 +1,13 @@
 ﻿{
+  "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "Systemuhr",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Größe der Uhranzeige",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Breite des Felds der Systemuhr auf der untersten Anzeigeleiste. Bei Verwendung weiterer Mods, die die unterste Anzeigeleiste mitnutzen, wie z.B. Advanced Simulation Speed, wird empfohlen, die Größe der Uhranzeige nicht zu erhöhen.",
   "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Small]": "Klein",
   "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Medium]": "Mittel",
   "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Large]": "Groß",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Sekunden anzeigen",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Falls eingeschaltet, wird die Uhrzeit mit Sekunden angezeigt.",
+  "SystemClockMod.AnteMeridiem": "vormittags",
+  "SystemClockMod.PostMeridiem": "nachmittags",
   "SystemClockMod.Languege.DisplayName": "Deutsch"
 }
