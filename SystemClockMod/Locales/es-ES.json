@@ -1,3 +1,13 @@
 ﻿{
+  "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "System Clock",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Tamaño del reloj",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "Ajusta el tamaño del reloj. Si utiliza otro mod que utiliza el panel inferior (por ejemplo, el mod Advanced Simulation Speed) junto con este mod, se recomienda no aumentar el tamaño del reloj.",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Small]": "Pequeño",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Medium]": "Mediano",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Large]": "Grande",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Mostrar segundos",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Al estar activo, muestra la hora, los minutos y también los segundos.",
+  "SystemClockMod.AnteMeridiem": "AM",
+  "SystemClockMod.PostMeridiem": "PM",
   "SystemClockMod.Languege.DisplayName": "Español"
 }
