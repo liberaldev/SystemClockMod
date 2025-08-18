@@ -7,7 +7,7 @@
   "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Large]": "Duży",
   "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Pokaż sekundy",
   "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "Po włączeniu wyświetla czas z dokładnością do sekundy.",
-  "SystemClockMod.AnteMeridiem": "AM",
-  "SystemClockMod.PostMeridiem": "PM",
+  "SystemClockMod.AnteMeridiem": "rano",
+  "SystemClockMod.PostMeridiem": "po południu",
   "SystemClockMod.Languege.DisplayName": "Polski"
 }
