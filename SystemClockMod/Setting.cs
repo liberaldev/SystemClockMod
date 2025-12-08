@@ -6,8 +6,12 @@ using Game.UI.Widgets;
 namespace SystemClockMod
 {
     [FileLocation(nameof(SystemClockMod))]
-    public class Setting(IMod mod) : ModSetting(mod)
+    public class Setting : ModSetting
     {
+        public Setting(IMod mod) : base(mod)
+        {
+        }
+        
         private const string Section = "Main";
         
         public override void SetDefaults()

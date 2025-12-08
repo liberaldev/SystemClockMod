@@ -11,7 +11,7 @@ namespace SystemClockMod
     public partial class UISystem : UISystemBase
     {
         private string CurrentTimeString { get; set; } = GetFormattedSystemTime();
-        private static readonly string[] LocalesWithAmpmPrefix = ["ko-KR"];
+        private static readonly string[] LocalesWithAmpmPrefix = new string[] { "ko-KR" };
         private static string ClockSizeSetting => Mod.Setting.ClockSizeSetting.ToString();
         
         private System.Timers.Timer _timer;
