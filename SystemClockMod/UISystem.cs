@@ -41,7 +41,10 @@ namespace SystemClockMod
                         break;
                 }
 
-                formattedTime = !LocalesWithAmpmPrefix.Contains(GameManager.instance.localizationManager.activeLocaleId) ? $"{hour:00}:{formattedTime} {ampm}" : $"{ampm} {hour:00}:{formattedTime}";
+                formattedTime = !LocalesWithAmpmPrefix
+                    .Contains(GameManager.instance.localizationManager.activeLocaleId)
+                    ? $"{hour:00}:{formattedTime} {ampm}"
+                    : $"{ampm} {hour:00}:{formattedTime}";
             }
             else
             {
