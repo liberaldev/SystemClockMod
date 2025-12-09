@@ -23,7 +23,7 @@
 
     <Target Name="BuildUI" AfterTargets="AfterBuild">
         <Exec
-                Command="$(SetNodeEnv)npm run build"
+                Command="npm run build"
                 WorkingDirectory="$(ProjectDir)..\SystemClockUiMod"
                 EnvironmentVariables="$(EnvVars)" />
     </Target>
