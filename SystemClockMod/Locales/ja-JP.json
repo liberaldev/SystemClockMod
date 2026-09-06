@@ -1,3 +1,13 @@
 ﻿{
+  "Options.SECTION[SystemClockMod.SystemClockMod.Mod]": "システム時計",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "時計のサイズ",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.ClockSizeSetting]": "時計のサイズを設定します。AdvancedSimulationSpeed など、下部のパネルを使用するモードとこのモードを併用する場合、時計のサイズを大きくしないことをおすすめします。",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Small]": "小",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Medium]": "中",
+  "Options.SystemClockMod.SystemClockMod.Mod.CLOCKSIZE[Large]": "大",
+  "Options.OPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "秒を表示",
+  "Options.OPTION_DESCRIPTION[SystemClockMod.SystemClockMod.Mod.Setting.DisplaySeconds]": "有効にすると、秒単位までの時刻を表示します。",
+  "SystemClockMod.AnteMeridiem": "午前",
+  "SystemClockMod.PostMeridiem": "午後",
   "SystemClockMod.Languege.DisplayName": "日本語"
 }
